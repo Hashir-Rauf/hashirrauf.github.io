@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import avatarImg from '/avatar.jpg'
 import './entry.css'
 
 function EntryParticles() {
@@ -102,7 +103,7 @@ export default function ThemeEntry({ onSelect }) {
 
       <div className="entry-center">
         <div className="entry-avatar-wrap" style={{ animationDelay: '0s' }}>
-          <img src="/avatar.jpg" alt="Hashir Rauf" className="entry-avatar" />
+          <img src={avatarImg} alt="Hashir Rauf" className="entry-avatar" />
           <span className="entry-avail-ring" />
         </div>
         <h1 className="entry-title" style={{ animationDelay: '0.15s' }}>Hashir Rauf</h1>
