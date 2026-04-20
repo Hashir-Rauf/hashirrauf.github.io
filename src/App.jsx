@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import TechMarquee from './components/TechMarquee'
@@ -7,8 +7,20 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ThemeSwitcher from './components/ThemeSwitcher'
 
 export default function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark-space')
+
+  useEffect(() => {
+    if (theme === 'dark-space') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+    localStorage.setItem('portfolio-theme', theme)
+  }, [theme])
+
   useEffect(() => {
     const cursor = document.createElement('div')
     const ring = document.createElement('div')
@@ -63,6 +75,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ThemeSwitcher theme={theme} setTheme={setTheme} />
     </>
   )
 }
