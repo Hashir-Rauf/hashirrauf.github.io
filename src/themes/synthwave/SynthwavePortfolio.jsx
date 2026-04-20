@@ -133,7 +133,7 @@ export default function SynthwavePortfolio({ onBack }) {
             {[
               { icon: '◈', t: 'AI & ML',        d: 'ML models, NLP pipelines, computer vision, data-driven insights from raw datasets to production.' },
               { icon: '◎', t: 'Full-Stack',      d: 'REST APIs, mobile apps with Flutter/Kotlin, clean web interfaces from concept to deployment.' },
-              { icon: '⬡', t: 'Startup',         d: 'Co-founded ExaVerse 2024. Shipped Pockit and FacilityFirst from zero to production.' },
+              { icon: '⬡', t: 'Startup',         d: 'Co-founded ExaVerse 2025. Shipped Pockit and FacilityFirst from zero to production.' },
             ].map((c, i) => (
               <div key={c.t} className="sw-about-card" data-reveal style={{ '--d': `${i * 0.1}s` }}>
                 <span className="sw-card-icon">{c.icon}</span>

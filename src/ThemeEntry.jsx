@@ -36,15 +36,18 @@ export default function ThemeEntry({ onSelect }) {
       <div className="entry-grid-bg" aria-hidden />
 
       <div className="entry-center">
-        <div className="entry-logo" style={{ animationDelay: '0s' }}>HR.</div>
-        <h1 className="entry-title" style={{ animationDelay: '0.1s' }}>Hashir Rauf</h1>
-        <p className="entry-tagline" style={{ animationDelay: '0.2s' }}>
+        <div className="entry-avatar-wrap" style={{ animationDelay: '0s' }}>
+          <img src="/avatar.jpg" alt="Hashir Rauf" className="entry-avatar" />
+          <span className="entry-avail-ring" />
+        </div>
+        <h1 className="entry-title" style={{ animationDelay: '0.15s' }}>Hashir Rauf</h1>
+        <p className="entry-tagline" style={{ animationDelay: '0.25s' }}>
           Software Developer &amp; Data Scientist
         </p>
 
-        <div className="entry-divider" style={{ animationDelay: '0.25s' }} />
+        <div className="entry-divider" style={{ animationDelay: '0.3s' }} />
 
-        <div className="entry-prompt-wrap" style={{ animationDelay: '0.3s' }}>
+        <div className="entry-prompt-wrap" style={{ animationDelay: '0.35s' }}>
           <span className="entry-gt">&gt;&nbsp;</span>
           <input
             ref={inputRef}
@@ -58,7 +61,7 @@ export default function ThemeEntry({ onSelect }) {
           />
         </div>
 
-        <div className="entry-chips" style={{ animationDelay: '0.4s' }}>
+        <div className="entry-chips" style={{ animationDelay: '0.45s' }}>
           {THEMES.map(t => {
             const isMatch = matches.find(m => m.id === t.id)
             return (
@@ -76,7 +79,7 @@ export default function ThemeEntry({ onSelect }) {
           })}
         </div>
 
-        <p className="entry-hint" style={{ animationDelay: '0.55s' }}>
+        <p className="entry-hint" style={{ animationDelay: '0.6s' }}>
           type · enter · or click
         </p>
       </div>

@@ -100,7 +100,7 @@ export default function MinimalPortfolio({ onBack }) {
             {[
               { n: '01', title: 'AI & Data Science',  desc: 'ML models with PyTorch and scikit-learn. NLP pipelines, computer vision, and data-driven insights from raw datasets to production.' },
               { n: '02', title: 'Full-Stack Dev',      desc: 'REST APIs with Node.js and .NET, mobile apps with Flutter/Kotlin, clean web interfaces from concept to deployment.' },
-              { n: '03', title: 'Startup Building',    desc: 'Co-founded ExaVerse 2024. Shipped Pockit and FacilityFirst from zero to production with real users.' },
+              { n: '03', title: 'Startup Building',    desc: 'Co-founded ExaVerse 2025. Shipped Pockit and FacilityFirst from zero to production with real users.' },
             ].map((c, i) => (
               <div key={c.n} className="mn-about-card" data-reveal style={{ '--d': `${i * 0.1}s` }}>
                 <span className="mn-card-num">{c.n}</span>

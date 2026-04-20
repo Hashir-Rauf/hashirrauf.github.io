@@ -85,15 +85,15 @@
 }
 .sw-nav-cta:hover { background: rgba(255,0,110,0.08); box-shadow: 0 0 16px rgba(255,0,110,0.2); }
 
-/* ── reveal ── */
+/* ── reveal — neon power-on flicker ── */
 .synthwave-theme [data-reveal] {
-  opacity: 0;
-  clip-path: inset(0 0 100% 0);
-  transition: opacity 0.5s ease, clip-path 0.5s ease;
+  opacity: 0; transform: translateY(22px);
+  filter: brightness(2.5) saturate(3);
+  transition: opacity 0.55s ease, transform 0.55s ease, filter 0.55s ease;
 }
 .synthwave-theme [data-reveal].revealed {
-  opacity: 1;
-  clip-path: inset(0 0 0% 0);
+  opacity: 1; transform: translateY(0);
+  filter: brightness(1) saturate(1);
 }
 .synthwave-theme [data-reveal][style*='--d'] { transition-delay: var(--d, 0s); }
 

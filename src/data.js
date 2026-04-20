@@ -12,7 +12,7 @@ export const STATS = [
   { num: '3.72', label: 'CGPA' },
   { num: '8+',   label: 'Projects' },
   { num: '2×',   label: 'Gold Medalist' },
-  { num: '2024', label: 'ExaVerse Founded' },
+  { num: '2025', label: 'ExaVerse Founded' },
 ]
 
 export const EXPERIENCE = [
@@ -20,7 +20,7 @@ export const EXPERIENCE = [
     role: 'Co-founder & Software Developer',
     company: 'ExaVerse',
     badge: 'STARTUP',
-    date: 'Jan 2024 – Present',
+    date: 'Jan 2025 – Present',
     bullets: [
       'Co-founded ExaVerse — AI-powered software startup building mobile apps and digital products.',
       'Shipped Pockit: AI personal finance app with smart budgeting, expense tracking, multi-language support.',

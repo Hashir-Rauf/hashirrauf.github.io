@@ -30,7 +30,7 @@ const cards = [
       </svg>
     ),
     title: 'Startup Building',
-    desc: 'Co-founded ExaVerse in 2024. Shipped Pockit (AI finance app) and FacilityFirst from zero to production with real users.',
+    desc: 'Co-founded ExaVerse in 2025. Shipped Pockit (AI finance app) and FacilityFirst from zero to production with real users.',
   },
 ]
 

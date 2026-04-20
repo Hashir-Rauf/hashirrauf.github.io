@@ -12,7 +12,7 @@ const stats = [
   { num: '3.72', label: 'CGPA' },
   { num: '8+',   label: 'Projects Built' },
   { num: '2x',   label: 'Gold Medalist' },
-  { num: '2024', label: 'ExaVerse Founded' },
+  { num: '2025', label: 'ExaVerse Founded' },
 ]
 
 const files = [

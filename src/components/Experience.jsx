@@ -21,7 +21,7 @@ const experience = [
     company: 'ExaVerse',
     badge: 'STARTUP',
     badgeClass: 'badge-startup',
-    date: 'Jan 2024 - Present',
+    date: 'Jan 2025 - Present',
     bullets: [
       'Co-founded ExaVerse, an AI-powered software startup building mobile apps and digital products.',
       'Shipped Pockit — an AI personal finance app with expense tracking, smart budgeting, and multi-language support using Flutter and Firebase.',
