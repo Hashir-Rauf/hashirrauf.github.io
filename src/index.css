@@ -24,6 +24,7 @@
 
 html { scroll-behavior: smooth; }
 
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -674,11 +675,31 @@ img { display: block; }
   .contact-grid { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 640px) {
-  .hero { padding: 6rem 1.5rem 3rem; }
-  .about-section, .experience-section, .projects-section, .contact-section { padding: 5rem 1.5rem; }
+  .hero { padding: 6rem 1.25rem 3rem; }
+  .about-section, .experience-section, .projects-section, .contact-section { padding: 4rem 1.25rem; }
   .projects-grid, .contact-grid { grid-template-columns: 1fr; }
-  .footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+  .footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.25rem; }
   .nav-pill { max-width: 100%; }
+
+  /* Nav mega: 3 cols overflows on mobile */
+  .nav-mega { grid-template-columns: 1fr; gap: 0.25rem; padding: 1rem 1.25rem; }
+
+  /* Timeline */
+  .timeline-top { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .timeline-item { grid-template-columns: 36px 1fr; gap: 0.85rem; }
+  .timeline-dot { width: 36px; height: 36px; font-size: 0.85rem; }
+  .timeline-line { left: 18px; }
+  .timeline-card { padding: 1.25rem; }
+
+  /* Section spacing */
+  .marquee-section { padding: 2.5rem 0; }
+  .about-header, .experience-header, .projects-header { margin-bottom: 3rem; }
+
+  /* Hero stats already 2-col from 1024px query — ensure gap is tighter */
+  .hero-stats { gap: 1.25rem; }
+
+  /* Contact header spacing */
+  .contact-subtitle { margin-bottom: 2rem; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
