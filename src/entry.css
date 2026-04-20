@@ -1,0 +1,119 @@
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ENTRY / THEME SELECTION SCREEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.entry-root {
+  min-height: 100vh;
+  background: #060608;
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: opacity 0.4s ease;
+}
+.entry-root.entry-exit { opacity: 0; pointer-events: none; }
+
+/* subtle dot-grid background */
+.entry-grid-bg {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.entry-center {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0; max-width: 580px; width: 100%; text-align: center;
+  position: relative; z-index: 1;
+}
+.entry-center > * { animation: eFade 0.7s ease both; }
+
+.entry-logo {
+  font-size: 3.5rem; font-weight: 900; letter-spacing: -0.05em;
+  background: linear-gradient(135deg, #3b82f6, #22d3ee);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+}
+.entry-title {
+  font-size: 1.4rem; font-weight: 700; color: #f1f5f9;
+  letter-spacing: -0.02em; margin-bottom: 0.35rem;
+}
+.entry-tagline {
+  font-size: 0.8rem; color: #475569; letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.entry-divider {
+  width: 40px; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent);
+  margin-bottom: 1.5rem;
+}
+
+/* ── prompt ── */
+.entry-prompt-wrap {
+  display: flex; align-items: center;
+  background: #0e0e10; border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px; padding: 0.7rem 1.1rem;
+  width: 100%; margin-bottom: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.entry-prompt-wrap:focus-within {
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
+}
+.entry-gt {
+  font-family: 'JetBrains Mono', monospace;
+  color: #22d3ee; font-size: 0.95rem; font-weight: 600;
+  flex-shrink: 0; user-select: none;
+}
+.entry-input {
+  flex: 1; background: none; border: none; outline: none;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f1f5f9; font-size: 0.9rem;
+  caret-color: #22d3ee;
+}
+.entry-input::placeholder { color: #2a3040; }
+
+/* ── chips ── */
+.entry-chips {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.entry-chip {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.9rem; border-radius: 99px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  cursor: pointer; transition: all 0.22s;
+  position: relative;
+}
+.entry-chip:hover {
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+}
+.entry-chip.matched {
+  border-color: var(--a);
+  background: color-mix(in srgb, var(--a) 8%, transparent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--a) 25%, transparent);
+}
+.chip-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.chip-label {
+  font-size: 0.78rem; font-weight: 600; color: #94a3b8;
+  transition: color 0.2s; white-space: nowrap;
+}
+.entry-chip.matched .chip-label { color: #f1f5f9; }
+.chip-sub {
+  font-size: 0.65rem; color: #334155;
+  transition: color 0.2s;
+}
+.entry-chip.matched .chip-sub { color: #64748b; }
+
+.entry-hint {
+  font-size: 0.65rem; color: #1e293b;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+
+@keyframes eFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
